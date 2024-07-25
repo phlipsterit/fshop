@@ -15,7 +15,10 @@ export default function Page() {
   return (
     <>
       <StoryblokComponent blok={story.content} />
-      <div>{JSON.stringify(debugInfo, null, 2)}</div>
+      <details>
+        <summary>Debug info</summary>
+        <div>{JSON.stringify(debugInfo, null, 2)}</div>
+      </details>
     </>
   );
 }
