@@ -45,7 +45,7 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
     story: data?.story,
     debugInfo: {
       requestUrl: request.url,
-      buildVersion: 2,
+      buildVersion: 3,
       sbParams,
     },
   });

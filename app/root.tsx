@@ -22,6 +22,10 @@ const components = {
 storyblokInit({
   accessToken: "F1xsYM0UylDtF0Z4UJg3Ggtt",
   use: [apiPlugin],
+  apiOptions: {
+    // storyblok-js-client config object
+    cache: { type: "none" },
+  },
   components,
 });
 
