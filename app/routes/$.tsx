@@ -24,7 +24,7 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
   let slug = params["*"] ?? "home";
   let blogSlug = params["*"] === "blog/" ? "blog/home" : null;
   const url = new URL(request.url);
-  const isDraft = url.searchParams.get("storyblok") !== null;
+  const isDraft = url.searchParams.get("_storyblok") !== null;
 
   let sbParams: ISbStoriesParams = {
     version: isDraft ? "draft" : "published",
@@ -45,6 +45,7 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
     story: data?.story,
     debugInfo: {
       requestUrl: request.url,
+      buildVersion: 1,
     },
   });
 };
