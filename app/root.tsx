@@ -26,7 +26,7 @@ storyblokInit({
     // storyblok-js-client config object
     cache: {
       clear: "auto",
-      type: "memory",
+      type: "none",
     },
   },
   components,

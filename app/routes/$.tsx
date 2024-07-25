@@ -30,7 +30,9 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
     version: isDraft ? "draft" : "published",
   };
 
-  let { data } = await getStoryblokApi()
+  const api = getStoryblokApi();
+  api.clearCacheVersion();
+  let { data } = await api
     .get(`cdn/stories/${blogSlug ? blogSlug : slug}`, sbParams)
     .catch((e) => {
       console.log("e", e);
