@@ -24,7 +24,10 @@ storyblokInit({
   use: [apiPlugin],
   apiOptions: {
     // storyblok-js-client config object
-    cache: { type: "none" },
+    cache: {
+      clear: "auto",
+      type: "memory",
+    },
   },
   components,
 });
