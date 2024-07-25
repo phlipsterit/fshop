@@ -6,6 +6,24 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import "./tailwind.css";
+import { apiPlugin, storyblokInit } from "@storyblok/react";
+import { Feature } from "~/components/Feature";
+import { Grid } from "~/components/Grid";
+import { Page } from "~/components/Page";
+import { Teaser } from "~/components/Teaser";
+
+const components = {
+  feature: Feature,
+  grid: Grid,
+  teaser: Teaser,
+  page: Page,
+};
+
+storyblokInit({
+  accessToken: "F1xsYM0UylDtF0Z4UJg3Ggtt",
+  use: [apiPlugin],
+  components,
+});
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
