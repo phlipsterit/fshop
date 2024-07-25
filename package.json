@@ -8,6 +8,7 @@
     "dev": "remix vite:dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "remix-serve ./build/server/index.js",
+    "gen:types": "npx storyblok pull-components --space 298363 && npx storyblok generate-typescript-typedefs --sourceFilePaths ./components.298363.json --destinationFilePath ./app/component-types-sb.d.ts",
     "typecheck": "tsc"
   },
   "dependencies": {
