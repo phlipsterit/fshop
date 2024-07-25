@@ -23,9 +23,11 @@ export default function Page() {
 export const loader = async ({ params, request }: LoaderFunctionArgs) => {
   let slug = params["*"] ?? "home";
   let blogSlug = params["*"] === "blog/" ? "blog/home" : null;
+  const url = new URL(request.url);
+  const isDraft = url.searchParams.get("storyblok") !== null;
 
   let sbParams: ISbStoriesParams = {
-    version: "draft",
+    version: isDraft ? "draft" : "published",
   };
 
   let { data } = await getStoryblokApi()
