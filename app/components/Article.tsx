@@ -1,7 +1,7 @@
 import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
-import type { ArticlePageStoryblok } from "~/component-types-sb";
+import type { ArticleStoryblok } from "~/component-types-sb";
 
-export const Article = ({ blok }: { blok: ArticlePageStoryblok }) => (
+export const Article = ({ blok }: { blok: ArticleStoryblok }) => (
   <main {...storyblokEditable(blok)} key={blok._uid} className="px-4">
     <h1>{blok.Name}</h1>
     {blok.Bilde && (

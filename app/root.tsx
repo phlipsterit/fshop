@@ -12,9 +12,11 @@ import { Grid } from "~/components/Grid";
 import { Page } from "~/components/Page";
 import { Teaser } from "~/components/Teaser";
 import { Article } from "./components/Article";
+import { PageLink } from "./components/PageLink";
 
 const components = {
   article: Article,
+  pageLink: PageLink,
   feature: Feature,
   grid: Grid,
   teaser: Teaser,
