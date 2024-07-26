@@ -31,6 +31,7 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
 
   let sbParams: ISbStoriesParams = {
     version: isDraft ? "draft" : "published",
+    resolve_links: "url",
   };
 
   const api = getStoryblokApi();
